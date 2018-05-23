@@ -87,16 +87,16 @@
         <div class="form-group">
             <label for="Nivel de estudio">¿Su nivel de estudios es?</label>
             <select class="form-control" id="nivelEstudios">
-                <option>Profesional</option>
-                <option>Tecnóloga</option>
-                <option>Técnica</option>
-                <option>Secundaria</option>
-                <option>Primaria</option>
-                <option>No tiene</option>
+                <option onclick="showProfecional();">Profesional</option>
+                <option onclick="showTecnica();">Tecnóloga</option>
+                <option onclick="showTecnica();">Técnica</option>
+                <option onclick="showBasica();">Secundaria</option>
+                <option onclick="showBasica();">Primaria</option>
+                <option onclick="showBasica();">No tiene</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divTituloObtenido" hidden>
             <label for="Ultimo Titulo">¿Último título obtenido?</label>
             <select class="form-control" id="ultimoTitulo">
                 <option>Pregrado</option>
@@ -106,7 +106,7 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divNombreTitulo" hidden>
             <label for="Nombre titulo">¿Nombre del título obtenido?</label>
             <input type="text" class="form-control" id="nombreTitulo" placeholder="">
             <div class="valid-feedback">
@@ -117,12 +117,12 @@
         <div class="form-group">
             <label for="Actualmente estudia">¿Actualmente estudia?</label>
             <select class="form-control" id="actualmenteEstudia">
-                <option>Si</option>
+                <option onclick="showEstudia();">Si</option>
                 <option>No</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divQueEstudia" hidden>
             <label for="Que estudia">¿Que está estudiando?</label>
             <select class="form-control" id="queEstudia">
                 <option>Primaria</option>
@@ -134,7 +134,7 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divNombreTituloObtener" hidden>
             <label for="Nombre titulo Obtener">¿Nombre del título obtenido a obtener?</label>
             <input type="text" class="form-control" id="nombreTituloObtener" placeholder="">
             <div class="valid-feedback">
@@ -145,50 +145,50 @@
         <div class="form-group">
             <label for="Actualmente trabaja">¿Actualmente trabaja?</label>
             <select class="form-control" id="actualmenteTrabaja">
-                <option>Si</option>
-                <option>No</option>
+                <option onclick="showTrabaja();">Si</option>
+                <option onclick="showNoTrabaja();">No</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divSectorLaboral" hidden>
             <label for="Sector">¿Cual es el sector en que labora?</label>
             <select class="form-control" id="sectorLaboral">
-                <option>Actividades artísticas, de entretenimiento y recreación</option>
-                <option>Transporte y almacenamiento</option>
-                <option>Información y comunicación</option>
-                <option>Actividades de servicio administrativo y de apoyo</option>
-                <option>Otras actividades de servicios</option>
-                <option>Construcción</option>
-                <option>Actividades profesionales, cientificas y tecnicas</option>
-                <option>Alojamiento y servicios de comida</option>
-                <option>Industrias manufactureras</option>
-                <option>Comercio al por mayor y al por menor</option>
-                <option>Otro</option>
+                <option onclick="hideSector();">Actividades artísticas, de entretenimiento y recreación</option>
+                <option onclick="hideSector();">Transporte y almacenamiento</option>
+                <option onclick="hideSector();">Información y comunicación</option>
+                <option onclick="hideSector();">Actividades de servicio administrativo y de apoyo</option>
+                <option onclick="hideSector();">Otras actividades de servicios</option>
+                <option onclick="hideSector();">Construcción</option>
+                <option onclick="hideSector();">Actividades profesionales, cientificas y tecnicas</option>
+                <option onclick="hideSector();">Alojamiento y servicios de comida</option>
+                <option onclick="hideSector();">Industrias manufactureras</option>
+                <option onclick="hideSector();">Comercio al por mayor y al por menor</option>
+                <option onclick="showOtroSector();">Otro</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divCualSector" hidden>
             <label for="Cual Sector">¿Cual?</label>
             <input type="text" class="form-control" id="cualSector" placeholder="">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divNegocioPropio" hidden>
             <label for="Negocio Propio">¿Es dueña de su propio negocio?</label>
             <select class="form-control" id="negocioPropio">
                 <option>Si</option>
-                <option>No</option>
+                <option onclick="showFormaTrabajo();">No</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divFormaTrabajo" hidden>
             <label for="Forma Trabajo">¿Trabaja de manera?</label>
             <select class="form-control" id="formaTrabajo">
-                <option>Formal</option>
+                <option onclick="showTipoEmpresa();">Formal</option>
                 <option>Informal</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divTipoEmpresa" hidden>
             <label for="Tipo Empresa">¿Tipo de empresa?</label>
             <select class="form-control" id="tipoEmpresa">
                 <option>Pública</option>
@@ -196,15 +196,15 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divHaTrabajado" hidden>
             <label for="ha trabajado">¿Alguna vez ha trabajado?</label>
             <select class="form-control" id="haTrabajado">
-                <option>Si</option>
+                <option onclick="tiempoDesempleo();">Si</option>
                 <option>No</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divTiempoDesempleo" hidden>
             <label for="Tiempo Desempleo">¿Desde hace cuanto tiempo no trabaja?</label>
             <select class="form-control" id="tiempoDesempleo">
                 <option>Menos de 1 año</option>
@@ -216,20 +216,20 @@
         <div class="form-group">
             <label for="Conoce las TIC">¿Conoce qué son las TIC (tecnologías de la información y comunicaciones)?</label>
             <select class="form-control" id="conoceTIC">
-                <option>Si</option>
-                <option>No</option>
+                <option onclick="showUsaTIC()">Si</option>
+                <option onclick="showInteresTIC()">No</option>
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divUsaTIC" hidden>
             <label for="Usalas TIC">¿Hace uso de las TIC?</label>
             <select class="form-control" id="usaTIC">
-                <option>Si</option>
+                <option onclick="showCualUso();">Si</option>
                 <option>No</option>
             </select>
         </div>
 
-        <fieldset>
+        <fieldset id="divCualUso" hidden>
             <label for="tipoUso">¿Cual es su uso?</label>
             <div class="form-check">
                 <label class="form-check-label">
@@ -293,26 +293,26 @@
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
+                    <input onclick="showOtroUso()" type="checkbox" class="form-check-input">
                     Otro
                 </label>
             </div>
         </fieldset>
 
-        <div class="form-group">
-            <label for="CualUso">¿Cual?</label>
-            <input type="text" class="form-control" id="cualUso" placeholder="">
+        <div class="form-group" id="divOtroUso" hidden>
+            <label for="Otro Uso">¿Cual?</label>
+            <input type="text" class="form-control" id="otroUso" placeholder="">
         </div>
 
-        <div class="form-group">
+        <div class="form-group" id="divInteresTIC" hidden>
             <label for="Interes TIC">¿estaria intereseda en conocer y  usar las TIC?</label>
             <select class="form-control" id="interesTIC">
-                <option>Si</option>
-                <option>No</option>
+                <option onclick="showTipoInteres();">Si</option>
+                <option onclick="showDesinteresTIC();">No</option>
             </select>
         </div>
 
-        <fieldset>
+        <fieldset id="divTipoInteres" hidden>
             <label for="tipoInteres">¿En cuales?</label>
             <div class="form-check">
                 <label class="form-check-label">
@@ -376,18 +376,18 @@
             </div>
             <div class="form-check">
                 <label class="form-check-label">
-                    <input type="checkbox" class="form-check-input">
+                    <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
                     Otro
                 </label>
             </div>
         </fieldset>
-        <div class="form-group">
+        <div class="form-group" id="divCualInteres" hidden>
             <label for="CualInteres">¿Cual?</label>
             <input type="text" class="form-control" id="cualInteres" placeholder="">
         </div>
 
-        <div class="form-group">
-            <label for="Motivo Desinteres">¿Estaría interesada en conocer y  usar las TIC?</label>
+        <div class="form-group" id="divDesinteresTIC" hidden>
+            <label for="Motivo Desinteres">¿Cuál cree que sería el motivo??</label>
             <select class="form-control" id="desinteresTIC">
                 <option>No cuenta con los recursos económicos</option>
                 <option>No dispone de tiempo para aprender</option>
@@ -395,10 +395,10 @@
                 <option>No me permiten el uso </option>
                 <option>Temor a la tecnología</option>
                 <option>No se leer ni escribir</option>
-                <option>Otro</option>
+                <option onclick="showOtroDesinteres();">Otro</option>
             </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="divCualDesinteres" hidden>
             <label for="CualDesinteres">¿Cual?</label>
             <input type="text" class="form-control" id="cualDesinteres" placeholder="">
         </div>
@@ -408,4 +408,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" ></script>
 <script src="../Util/Js/bootstrap.min.js"></script>
+
+<script src="../Util/Js/registry.js"></script>
 </html>

@@ -1,0 +1,26 @@
+###> jetbrain framework ###
+.idea/
+###> jetbrain framework ###
+
+###> symfony/framework-bundle ###
+/rcmtns-server/.env
+/rcmtns-server/public/bundles/
+/rcmtns-server/var/
+/rcmtns-server/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-pack ###
+/rcmtns-server/node_modules/
+/rcmtns-server/public/build/
+rcmtns-server/npm-debug.log
+rcmtns-server/yarn-error.log
+###< symfony/webpack-encore-pack ###
+
+###> symfony/phpunit-bridge ###
+rcmtns-server/.phpunit
+/rcmtns-server//phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/rcmtns-server/.web-server-pid
+###< symfony/web-server-bundle ###

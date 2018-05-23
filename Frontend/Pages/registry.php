@@ -195,6 +195,214 @@
                 <option>Privada</option>
             </select>
         </div>
+
+        <div class="form-group">
+            <label for="ha trabajado">¿Alguna vez ha trabajado?</label>
+            <select class="form-control" id="haTrabajado">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Tiempo Desempleo">¿Desde hace cuanto tiempo no trabaja?</label>
+            <select class="form-control" id="tiempoDesempleo">
+                <option>Menos de 1 año</option>
+                <option>De 1 a 5 años</option>
+                <option>Mas de 5 años</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Conoce las TIC">¿Conoce qué son las TIC (tecnologías de la información y comunicaciones)?</label>
+            <select class="form-control" id="conoceTIC">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Usalas TIC">¿Hace uso de las TIC?</label>
+            <select class="form-control" id="usaTIC">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <fieldset>
+            <label for="tipoUso">¿Cual es su uso?</label>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Entretenimiento(fotos videos peliculas musicas juegos)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Redes sociales
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Correo electrónico
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Compras en internet
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Ventas en internet
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Comunicación
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Educación
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Servicios bancarios
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Pago de servicios públicos (luz,teléfono)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Servicios o trámites en línea (citas médicas, licencias, etc)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Otro
+                </label>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="CualUso">¿Cual?</label>
+            <input type="text" class="form-control" id="cualUso" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="Interes TIC">¿estaria intereseda en conocer y  usar las TIC?</label>
+            <select class="form-control" id="interesTIC">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <fieldset>
+            <label for="tipoInteres">¿En cuales?</label>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Entretenimiento(fotos videos peliculas musicas juegos)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Redes sociales
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Correo electrónico
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Compras en internet
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Ventas en internet
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Comunicación
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Educación
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Servicios bancarios
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Pago de servicios públicos (luz,teléfono)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Servicios o trámites en línea (citas médicas, licencias, etc)
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Otro
+                </label>
+            </div>
+        </fieldset>
+        <div class="form-group">
+            <label for="CualInteres">¿Cual?</label>
+            <input type="text" class="form-control" id="cualInteres" placeholder="">
+        </div>
+
+        <div class="form-group">
+            <label for="Motivo Desinteres">¿Estaría interesada en conocer y  usar las TIC?</label>
+            <select class="form-control" id="desinteresTIC">
+                <option>No cuenta con los recursos económicos</option>
+                <option>No dispone de tiempo para aprender</option>
+                <option>No es de su interés</option>
+                <option>No me permiten el uso </option>
+                <option>Temor a la tecnología</option>
+                <option>No se leer ni escribir</option>
+                <option>Otro</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="CualDesinteres">¿Cual?</label>
+            <input type="text" class="form-control" id="cualDesinteres" placeholder="">
+        </div>
+
     </form>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

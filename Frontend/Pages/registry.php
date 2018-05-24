@@ -1,4 +1,4 @@
-<form class="needs-validation" novalidate>
+<form class="needs-validation" id="formRegistro" novalidate>
         <div class="form-group">
             <label for="Tipo Documento">Tipo de documento</label>
             <select class="form-control" name="tipoDoc" id="tioDoc" required>
@@ -9,7 +9,7 @@
         </div>
 
         <div class="form-group" id="divCualTipoDoc" hidden>
-            <label for="CualInteres">¿Cual?</label>
+            <label for="Cual tipo doc">¿Cual?</label>
             <input type="text" class="form-control" name="cualTipoDoc" id="cualTipoDoc" placeholder="" required>
         </div>
 
@@ -388,7 +388,7 @@
         </fieldset>
         <div class="form-group" id="divCualInteres" hidden>
             <label for="CualInteres">¿Cual?</label>
-            <input type="text" class="form-control" id="cualInteres" placeholder="">
+            <input type="text" class="form-control" name="cualInteres" id="cualInteres" placeholder="">
         </div>
 
         <div class="form-group" id="divDesinteresTIC" hidden>

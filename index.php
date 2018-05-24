@@ -54,6 +54,12 @@
 </section>
 <section id="registro" hidden>
     <div class="container" id="formRegistro">
+        <div class="container justify-content-center align-items-center">
+            <h1 class="text-uppercase masthead header text-center">
+                <strong>Formulario Mujer</strong>
+            </h1>
+        </div>
+
         <?php include "Frontend/Pages/registry.php"?>
     </div>
 </section>

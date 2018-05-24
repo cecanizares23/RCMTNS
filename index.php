@@ -35,7 +35,7 @@
                 <hr>
             </div>
             <div class="col-lg-8 mx-auto">
-                <p class="text-faded mb-5">¡En esta pagina encontraras las herramientas necesarias para ser toda una mujer tic, animate y goza de los beneficios!</p>
+                <p class="text-faded mb-5">¡En esta pagina encontraras las herramientas necesarias para ser toda una mujer TIC, animate y goza de los beneficios!</p>
                 <a class="btn btn-primary btn-xl js-scroll-trigger" onclick="showFormRegistro();" href="#registro">Registrarme</a>
             </div>
         </div>

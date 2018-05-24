@@ -80,34 +80,60 @@ function clearTiempoDesempleo() {
 
 function showUsaTIC() {
     document.getElementById("divUsaTIC").hidden=false;
+    document.getElementById("divInteresTIC").hidden=true;
+    hideTipoInteres();
+    hideCualInteres();
+    hideDesinteresTIC();
+    hideOtroDesinteres();
 }
 
 function showInteresTIC() {
     document.getElementById("divInteresTIC").hidden=false;
+    document.getElementById("divUsaTIC").hidden=true;
+    hiddenCualUso();
+    hiddenOtroUso();
 }
 function showCualUso() {
     document.getElementById("divCualUso").hidden=false;
+}
+function hiddenCualUso() {
+    document.getElementById("divCualUso").hidden=true;
 }
 
 function showOtroUso() {
     document.getElementById("divOtroUso").hidden=false;
 }
+function hiddenOtroUso() {
+    document.getElementById("divOtroUso").hidden=true;
+}
 
 function showTipoInteres() {
     document.getElementById("divTipoInteres").hidden=false;
+}
+function hideTipoInteres() {
+    document.getElementById("divTipoInteres").hidden=true;
 }
 
 function showCualInteres() {
     document.getElementById("divCualInteres").hidden=false;
 }
+function hideCualInteres() {
+    document.getElementById("divCualInteres").hidden=true;
+}
 
 function showDesinteresTIC() {
     document.getElementById("divDesinteresTIC").hidden=false;
+    hideCualInteres();
+}
+function hideDesinteresTIC() {
+    document.getElementById("divDesinteresTIC").hidden=true;
 }
 
 function showOtroDesinteres() {
     document.getElementById("divCualDesinteres").hidden=false;
-
+}
+function hideOtroDesinteres() {
+    document.getElementById("divCualDesinteres").hidden=true;
 }
 
 function showFormRegistro() {

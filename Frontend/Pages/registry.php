@@ -230,7 +230,7 @@
             <label for="Usalas TIC">¿Hace uso de las TIC?</label>
             <select class="form-control" name="usaTIC" id="usaTIC">
                 <option onclick="showCualUso();">Si</option>
-                <option>No</option>
+                <option onclick="hiddenCualUso();">No</option>
             </select>
         </div>
 
@@ -406,6 +406,9 @@
         <div class="form-group" id="divCualDesinteres" hidden>
             <label for="CualDesinteres">¿Cual?</label>
             <input type="text" class="form-control" name="cualDesinteres" id="cualDesinteres" placeholder="">
+        </div>
+        <div class="container my-auto text-center">
+            <button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Registrarme</button>
         </div>
 
 </form>

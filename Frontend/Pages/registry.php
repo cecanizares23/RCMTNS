@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>RCMTNS</title>
-
-
-    <link rel="stylesheet" href="../Util/Css/bootstrap.min.css">
-</head>
-<body>
-    <form class="needs-validation" novalidate>
+<form class="needs-validation" novalidate>
         <div class="form-group">
             <label for="Tipo Documento">Tipo de documento</label>
             <select class="form-control" name="tipoDoc" id="tioDoc" required>
@@ -418,11 +408,5 @@
             <input type="text" class="form-control" name="cualDesinteres" id="cualDesinteres" placeholder="">
         </div>
 
-    </form>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" ></script>
-<script src="../Util/Js/bootstrap.min.js"></script>
+</form>
 
-<script src="../Util/Js/registry.js"></script>
-</html>

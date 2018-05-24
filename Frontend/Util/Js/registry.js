@@ -109,3 +109,11 @@ function showOtroDesinteres() {
     document.getElementById("divCualDesinteres").hidden=false;
 
 }
+
+function showFormRegistro() {
+    document.getElementById("registro").hidden=false;
+}
+
+function showQuieneSomos() {
+    document.getElementById("quieneSomos").hidden=false;
+}

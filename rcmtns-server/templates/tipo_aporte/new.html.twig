@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TipoAporte{% endblock %}
+
+{% block body %}
+    <h1>Create new TipoAporte</h1>
+
+    {{ include('tipo_aporte/_form.html.twig') }}
+
+    <a href="{{ path('tipo_aporte_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit TipoSocio{% endblock %}
+
+{% block body %}
+    <h1>Edit TipoSocio</h1>
+
+    {{ include('tipo_socio/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('tipo_socio_index') }}">back to list</a>
+
+    {{ include('tipo_socio/_delete_form.html.twig') }}
+{% endblock %}

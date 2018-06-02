@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    enviarRegistro();
+    //enviarRegistro();
 });
 
 function enviarRegistro() {

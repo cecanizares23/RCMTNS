@@ -3,9 +3,12 @@
 ###> jetbrain framework ###
 
 ###> symfony/framework-bundle ###
-/rcmtns-server/.env
+
+#/rcmtns-server/.env
+
 /rcmtns-server/public/bundles/
 /rcmtns-server/var/
+/rcmtns-server/.idea/
 /rcmtns-server/vendor/
 ###< symfony/framework-bundle ###
 

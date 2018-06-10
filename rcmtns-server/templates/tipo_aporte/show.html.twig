@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TipoAporte{% endblock %}
+
+{% block body %}
+    <h1>TipoAporte</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ tipo_aporte.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ tipo_aporte.nombre }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('tipo_aporte_index') }}">back to list</a>
+
+    <a href="{{ path('tipo_aporte_edit', {'id': tipo_aporte.id}) }}">edit</a>
+
+    {{ include('tipo_aporte/_delete_form.html.twig') }}
+{% endblock %}

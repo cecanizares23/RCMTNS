@@ -1,4 +1,4 @@
-<form class="needs-validation" id="formRegistro" novalidate>
+<form action="http://127.0.0.1:8000/candidata/new" method="post">
         <div class="form-group">
             <label for="Tipo Documento">Tipo de documento</label>
             <select class="form-control" name="tipoDoc" id="tioDoc" required>
@@ -378,7 +378,7 @@
                     <input type="checkbox" class="form-check-input"  name="tramitesInteres" id="tramitesInteres">
                     Servicios o trámites en línea (citas médicas, licencias, etc)
                 </label>
-            </div>
+            </di    v>
             <div class="form-check">
                 <label class="form-check-label">
                     <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
@@ -408,8 +408,7 @@
             <input type="text" class="form-control" name="cualDesinteres" id="cualDesinteres" placeholder="">
         </div>
         <div class="container my-auto text-center">
-            <button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Registrarme</button>
+            <input type="submit" value="Registrarme" class="btn btn-primary">
         </div>
-
 </form>
 

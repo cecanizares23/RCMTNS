@@ -1,0 +1,234 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Candidata{% endblock %}
+
+{% block body %}
+    <h1>Candidata</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ candidatum.id }}</td>
+            </tr>
+            <tr>
+                <th>TipoDoc</th>
+                <td>{{ candidatum.tipoDoc }}</td>
+            </tr>
+            <tr>
+                <th>CualTipoDoc</th>
+                <td>{{ candidatum.cualTipoDoc }}</td>
+            </tr>
+            <tr>
+                <th>NumeroID</th>
+                <td>{{ candidatum.numeroID }}</td>
+            </tr>
+            <tr>
+                <th>Nombres</th>
+                <td>{{ candidatum.nombres }}</td>
+            </tr>
+            <tr>
+                <th>Apellidos</th>
+                <td>{{ candidatum.apellidos }}</td>
+            </tr>
+            <tr>
+                <th>FechaNacimiento</th>
+                <td>{{ candidatum.fechaNacimiento }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ candidatum.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ candidatum.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Direccion</th>
+                <td>{{ candidatum.direccion }}</td>
+            </tr>
+            <tr>
+                <th>EstadoCivil</th>
+                <td>{{ candidatum.estadoCivil }}</td>
+            </tr>
+            <tr>
+                <th>Hijos</th>
+                <td>{{ candidatum.hijos }}</td>
+            </tr>
+            <tr>
+                <th>NivelEstudios</th>
+                <td>{{ candidatum.nivelEstudios }}</td>
+            </tr>
+            <tr>
+                <th>UltimoTitulo</th>
+                <td>{{ candidatum.ultimoTitulo }}</td>
+            </tr>
+            <tr>
+                <th>NombreTitulo</th>
+                <td>{{ candidatum.nombreTitulo }}</td>
+            </tr>
+            <tr>
+                <th>ActualmenteEstudia</th>
+                <td>{{ candidatum.actualmenteEstudia }}</td>
+            </tr>
+            <tr>
+                <th>QueEstudia</th>
+                <td>{{ candidatum.queEstudia }}</td>
+            </tr>
+            <tr>
+                <th>NombreTituloObtener</th>
+                <td>{{ candidatum.nombreTituloObtener }}</td>
+            </tr>
+            <tr>
+                <th>ActualmenteTrabaja</th>
+                <td>{{ candidatum.actualmenteTrabaja }}</td>
+            </tr>
+            <tr>
+                <th>SectorLaboral</th>
+                <td>{{ candidatum.sectorLaboral }}</td>
+            </tr>
+            <tr>
+                <th>CualSector</th>
+                <td>{{ candidatum.cualSector }}</td>
+            </tr>
+            <tr>
+                <th>NegocioPropio</th>
+                <td>{{ candidatum.negocioPropio }}</td>
+            </tr>
+            <tr>
+                <th>FormaTrabajo</th>
+                <td>{{ candidatum.formaTrabajo }}</td>
+            </tr>
+            <tr>
+                <th>TipoEmpresa</th>
+                <td>{{ candidatum.tipoEmpresa }}</td>
+            </tr>
+            <tr>
+                <th>HaTrabajado</th>
+                <td>{{ candidatum.haTrabajado }}</td>
+            </tr>
+            <tr>
+                <th>TiempoDesempleo</th>
+                <td>{{ candidatum.tiempoDesempleo }}</td>
+            </tr>
+            <tr>
+                <th>ConoceTIC</th>
+                <td>{{ candidatum.conoceTIC }}</td>
+            </tr>
+            <tr>
+                <th>UsaTIC</th>
+                <td>{{ candidatum.usaTIC }}</td>
+            </tr>
+            <tr>
+                <th>EntretenimientoUso</th>
+                <td>{{ candidatum.entretenimientoUso }}</td>
+            </tr>
+            <tr>
+                <th>RedesUso</th>
+                <td>{{ candidatum.redesUso }}</td>
+            </tr>
+            <tr>
+                <th>CorreoUso</th>
+                <td>{{ candidatum.correoUso }}</td>
+            </tr>
+            <tr>
+                <th>ComprasUso</th>
+                <td>{{ candidatum.comprasUso }}</td>
+            </tr>
+            <tr>
+                <th>VentasUso</th>
+                <td>{{ candidatum.ventasUso }}</td>
+            </tr>
+            <tr>
+                <th>ComunicaionUso</th>
+                <td>{{ candidatum.comunicaionUso }}</td>
+            </tr>
+            <tr>
+                <th>EducacionUso</th>
+                <td>{{ candidatum.educacionUso }}</td>
+            </tr>
+            <tr>
+                <th>BancoUso</th>
+                <td>{{ candidatum.bancoUso }}</td>
+            </tr>
+            <tr>
+                <th>ServiciosPublicosUso</th>
+                <td>{{ candidatum.serviciosPublicosUso }}</td>
+            </tr>
+            <tr>
+                <th>TramitesUso</th>
+                <td>{{ candidatum.tramitesUso }}</td>
+            </tr>
+            <tr>
+                <th>OtroUso</th>
+                <td>{{ candidatum.otroUso }}</td>
+            </tr>
+            <tr>
+                <th>InteresTIC</th>
+                <td>{{ candidatum.interesTIC }}</td>
+            </tr>
+            <tr>
+                <th>EntretenimientoInteres</th>
+                <td>{{ candidatum.entretenimientoInteres }}</td>
+            </tr>
+            <tr>
+                <th>RedesInteres</th>
+                <td>{{ candidatum.redesInteres }}</td>
+            </tr>
+            <tr>
+                <th>CorreoInteres</th>
+                <td>{{ candidatum.correoInteres }}</td>
+            </tr>
+            <tr>
+                <th>ComprasInteres</th>
+                <td>{{ candidatum.comprasInteres }}</td>
+            </tr>
+            <tr>
+                <th>VentasInteres</th>
+                <td>{{ candidatum.ventasInteres }}</td>
+            </tr>
+            <tr>
+                <th>ComunicacionInteres</th>
+                <td>{{ candidatum.comunicacionInteres }}</td>
+            </tr>
+            <tr>
+                <th>EducacionInteres</th>
+                <td>{{ candidatum.educacionInteres }}</td>
+            </tr>
+            <tr>
+                <th>BancoInteres</th>
+                <td>{{ candidatum.bancoInteres }}</td>
+            </tr>
+            <tr>
+                <th>ServiciosPublicosInteres</th>
+                <td>{{ candidatum.serviciosPublicosInteres }}</td>
+            </tr>
+            <tr>
+                <th>TramitesInteres</th>
+                <td>{{ candidatum.tramitesInteres }}</td>
+            </tr>
+            <tr>
+                <th>DesinteresTIC</th>
+                <td>{{ candidatum.desinteresTIC }}</td>
+            </tr>
+            <tr>
+                <th>CualDesinteres</th>
+                <td>{{ candidatum.cualDesinteres }}</td>
+            </tr>
+            <tr>
+                <th>CualInteres</th>
+                <td>{{ candidatum.cualInteres }}</td>
+            </tr>
+            <tr>
+                <th>FechaIngreso</th>
+                <td>{{ candidatum.fechaIngreso ? candidatum.fechaIngreso|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('candidata_index') }}">back to list</a>
+
+    <a href="{{ path('candidata_edit', {'id': candidatum.id}) }}">edit</a>
+
+    {{ include('candidata/_delete_form.html.twig') }}
+{% endblock %}

@@ -9,7 +9,7 @@
 /rcmtns-server/public/bundles/
 /rcmtns-server/var/
 /rcmtns-server/.idea/
-/rcmtns-server/vendor/
+### /rcmtns-server/vendor/
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-pack ###

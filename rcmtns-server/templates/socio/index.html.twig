@@ -2,49 +2,79 @@
 
 {% block title %}Socio index{% endblock %}
 
+{% block stylesheets %}
+    <link href="/Util/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="/Util/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+{% endblock %}
 {% block body %}
     <div id="page-wrapper">
-        <h1>Socio index</h1>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Socios</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading"> Lista de Socios</div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-hover" width="100%" id="dataTables-example">
+                            <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Nit</th>
+                                <th>Representante</th>
+                                <th>CedulaRepresentante</th>
+                                <th>CorreoRepresentante</th>
+                                <th>TelefonoRepresentante</th>
+                                <th>FechaIngreso</th>
+                                <th>actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for socio in socios %}
+                                <tr>
+                                    <td>{{ socio.id }}</td>
+                                    <td>{{ socio.nombre }}</td>
+                                    <td>{{ socio.nit }}</td>
+                                    <td>{{ socio.representante }}</td>
+                                    <td>{{ socio.cedulaRepresentante }}</td>
+                                    <td>{{ socio.correoRepresentante }}</td>
+                                    <td>{{ socio.telefonoRepresentante }}</td>
+                                    <td>{{ socio.fechaIngreso ? socio.fechaIngreso|date('Y-m-d') : '' }}</td>
+                                    <td>
+                                        <a href="{{ path('socio_show', {'id': socio.id}) }}">show</a>
+                                        <a href="{{ path('socio_edit', {'id': socio.id}) }}">edit</a>
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="9">no records found</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nombre</th>
-                <th>Nit</th>
-                <th>Representante</th>
-                <th>CedulaRepresentante</th>
-                <th>CorreoRepresentante</th>
-                <th>TelefonoRepresentante</th>
-                <th>FechaIngreso</th>
-                <th>actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for socio in socios %}
-                <tr>
-                    <td>{{ socio.id }}</td>
-                    <td>{{ socio.nombre }}</td>
-                    <td>{{ socio.nit }}</td>
-                    <td>{{ socio.representante }}</td>
-                    <td>{{ socio.cedulaRepresentante }}</td>
-                    <td>{{ socio.correoRepresentante }}</td>
-                    <td>{{ socio.telefonoRepresentante }}</td>
-                    <td>{{ socio.fechaIngreso ? socio.fechaIngreso|date('Y-m-d') : '' }}</td>
-                    <td>
-                        <a href="{{ path('socio_show', {'id': socio.id}) }}">show</a>
-                        <a href="{{ path('socio_edit', {'id': socio.id}) }}">edit</a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="9">no records found</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-
-        <a href="{{ path('socio_new') }}">Create new</a>
     </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    <script src="/Util/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/Util/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/Util/datatables-responsive/dataTables.responsive.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
 {% endblock %}

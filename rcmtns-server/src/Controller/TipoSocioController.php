@@ -24,7 +24,7 @@ class TipoSocioController extends Controller
     }
 
     /**
-     * @Route("/new", name="tipo_socio_new", methods="GET|POST")
+     * @Route("/new", name="tipo_socio_new", methods="GET")
      */
     public function new(Request $request): Response
     {
@@ -47,6 +47,21 @@ class TipoSocioController extends Controller
     }
 
     /**
+     * @Route("/new", methods="POST")
+     */
+    public function newPost(Request $request): Response
+    {
+        $tipoSocio = new TipoSocio();
+        $tipoSocio->setNombre($request->request->get('nombre'));
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($tipoSocio);
+        $em->flush();
+        return $this->redirectToRoute('tipo_socio_index');
+    }
+
+
+
+    /**
      * @Route("/{id}", name="tipo_socio_show", methods="GET")
      */
     public function show(TipoSocio $tipoSocio): Response
@@ -61,13 +76,10 @@ class TipoSocioController extends Controller
     {
         $form = $this->createForm(TipoSocioType::class, $tipoSocio);
         $form->handleRequest($request);
-
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('tipo_socio_edit', ['id' => $tipoSocio->getId()]);
+            return $this->redirectToRoute('tipo_socio_index');
         }
-
         return $this->render('tipo_socio/edit.html.twig', [
             'tipo_socio' => $tipoSocio,
             'form' => $form->createView(),

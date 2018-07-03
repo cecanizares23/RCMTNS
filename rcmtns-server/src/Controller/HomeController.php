@@ -8,29 +8,41 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-
 use Symfony\Component\HttpFoundation\Response;
+use App\Repository\CandidataRepository;
+use App\Entity\Candidata;
+use App\Form\Candidata1Type;
 
-class HomeController
+class HomeController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="candidata_new", methods="GET|POST")
      */
-    public function number()
+    public function new(Request $request): Response
     {
-        $number = mt_rand(0, 100);
-        return new Response(
-            '<html><body>Lucky number: ' . $number . '</body></html>'
-        );
-    }
+        $candidatum = new Candidata();
+        $form = $this->createForm(Candidata1Type::class, $candidatum);
+        $form->handleRequest($request);
 
-    /**
-     * @Route("/secret")
-     */
-    public function secret()
-    {
-        return new Response(
-            '<html><body>this is a secret page</body></html>'
-        );
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            //asignarle la fecha del sistema
+
+            //metodo que retorne las categorias a las que pertenece
+
+            //recorrer el listado y añadir a la candidata
+
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($candidatum);
+            $em->flush();
+
+            return $this->redirectToRoute('candidata_index');
+        }
+
+        return $this->render('candidata/new.html.twig', [
+            'candidatum' => $candidatum,
+            'form' => $form->createView(),
+        ]);
     }
 }

@@ -33,7 +33,6 @@
                 <th>Direccion</th>
                 <th>Categoria</th>
                 <th>Fecha de ingreso</th>
-                <th>actions</th>
               </tr>
               </thead>
               <tbody>
@@ -53,14 +52,6 @@
                     {% endfor %}
                   </td>
                   <td>{{ candidatum.fechaIngreso ? candidatum.fechaIngreso|date('Y-m-d') : '' }}</td>
-                  <td>
-                    <a href="{{ path('candidata_show', {'id': candidatum.id}) }}">show</a>
-                    <a href="{{ path('candidata_edit', {'id': candidatum.id}) }}">edit</a>
-                  </td>
-                  {#</tr>#}
-                  {#{% else %}#}
-                  {#<tr>#}
-                  {#<td colspan="55">no records found</td>#}
                 </tr>
               {% endfor %}
               </tbody>

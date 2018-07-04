@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Registrar Candidata{% endblock %}
-
 {% block body %}
   <section id="registro" hidden>
     <div class="container col-sm-8" id="formRegistro">
@@ -10,12 +8,7 @@
           <strong>Formulario Mujer</strong>
         </h1>
       </div>
-
-<<<<<<< HEAD
-      <form method="post" id="ginito">
-=======
-      <form method="POST"  name="formuRegistro" id="formuRegistro">
->>>>>>> 31858cf3917f018292663d67d84792694aba3538
+      <form method="POST" name="formuRegistro" id="formuRegistro">
         <div class="form-group">
           <label for="tipo_doc">Tipo de documento</label>
           <select class="form-control" name="tipo_doc" id="tioDoc" required>
@@ -24,13 +17,10 @@
             <option onclick="showTipoDoc();">Otro</option>
           </select>
         </div>
-
         <div class="form-group" id="divCualTipoDoc" hidden>
           <label for="cual_tipo_doc">¿Cual?</label>
-          <input type="text" class="form-control" name="cual_tipo_doc" id="cualTipoDoc" placeholder="" >
+          <input type="text" class="form-control" name="cual_tipo_doc" id="cualTipoDoc" placeholder="">
         </div>
-
-
         <div class="form-group">
           <label for="numero_id">Numero de identificación</label>
           <input type="number" class="form-control" name="numero_id" id="numeroID" placeholder="" required>
@@ -86,7 +76,6 @@
             ¡Perfecto!
           </div>
         </div>
-
         <div class="form-group">
           <label for="estado_civil">¿Actualmente su estado civil es?</label>
           <select class="form-control" name="estado_civil" id="estadoCivil" required>
@@ -97,7 +86,6 @@
             <option>Viuda</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="hijos">¿Tiene usted hijos?</label>
           <select class="form-control" name="hijos" id="hijos" required>
@@ -105,7 +93,6 @@
             <option>No</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="nivel_estudios">¿Su nivel de estudios es?</label>
           <select class="form-control" name="nivel_estudios" id="nivelEstudios" required>
@@ -117,7 +104,6 @@
             <option onclick="showBasica();">No tiene</option>
           </select>
         </div>
-
         <div class="form-group" id="divTituloObtenido" hidden>
           <label for="ultimo_titulo">¿Último título obtenido?</label>
           <select class="form-control" name="ultimo_titulo" id="ultimoTitulo">
@@ -127,7 +113,6 @@
             <option>Doctorado</option>
           </select>
         </div>
-
         <div class="form-group" id="divNombreTitulo" hidden>
           <label for="nombre_titulo">¿Nombre del título obtenido?</label>
           <input type="text" class="form-control" name="nombre_titulo" id="nombreTitulo" placeholder="">
@@ -135,7 +120,6 @@
             ¡Perfecto!
           </div>
         </div>
-
         <div class="form-group">
           <label for="actualmente_estudia">¿Actualmente estudia?</label>
           <select class="form-control" name="actualmente_estudia" id="actualmenteEstudia" required>
@@ -143,7 +127,6 @@
             <option onclick="clearEstudia();">No</option>
           </select>
         </div>
-
         <div class="form-group" id="divQueEstudia" hidden>
           <label for="que_estudia">¿Que está estudiando?</label>
           <select class="form-control" name="que_estudia" id="queEstudia">
@@ -155,7 +138,6 @@
             <option>Postgrado</option>
           </select>
         </div>
-
         <div class="form-group" id="divNombreTituloObtener" hidden>
           <label for="nombre_titulo_obtener">¿Nombre del título obtenido a obtener?</label>
           <input type="text" class="form-control" name="nombre_titulo_obtener" id="nombreTituloObtener" placeholder="">
@@ -163,7 +145,6 @@
             ¡Perfecto!
           </div>
         </div>
-
         <div class="form-group">
           <label for="actualmente_trabaja">¿Actualmente trabaja?</label>
           <select class="form-control" name="actualmente_trabaja" id="actualmenteTrabaja" required>
@@ -171,7 +152,6 @@
             <option onclick="showNoTrabaja();">No</option>
           </select>
         </div>
-
         <div class="form-group" id="divSectorLaboral" hidden>
           <label for="sector_laboral">¿Cual es el sector en que labora?</label>
           <select class="form-control" name="sector_laboral" id="sectorLaboral">
@@ -188,12 +168,10 @@
             <option onclick="showOtroSector();">Otro</option>
           </select>
         </div>
-
         <div class="form-group" id="divCualSector" hidden>
           <label for="cual_sector">¿Cual?</label>
           <input type="text" class="form-control" name="cual_sector" id="cualSector" placeholder="">
         </div>
-
         <div class="form-group" id="divNegocioPropio" hidden>
           <label for="negocio_propio">¿Es dueña de su propio negocio?</label>
           <select class="form-control" name="negocio_propio" id="negocioPropio">
@@ -201,7 +179,6 @@
             <option onclick="showFormaTrabajo();">No</option>
           </select>
         </div>
-
         <div class="form-group" id="divFormaTrabajo" hidden>
           <label for="forma_trabajo">¿Trabaja de manera?</label>
           <select class="form-control" name="forma_trabajo" id="formaTrabajo">
@@ -209,7 +186,6 @@
             <option onclick="clearTipoEmpresa();">Informal</option>
           </select>
         </div>
-
         <div class="form-group" id="divTipoEmpresa" hidden>
           <label for="tipo_empresa">¿Tipo de empresa?</label>
           <select class="form-control" name="tipo_empresa" id="tipoEmpresa">
@@ -217,7 +193,6 @@
             <option>Privada</option>
           </select>
         </div>
-
         <div class="form-group" id="divHaTrabajado" hidden>
           <label for="ha_trabajado">¿Alguna vez ha trabajado?</label>
           <select class="form-control" name="ha_trabajado" id="haTrabajado">
@@ -225,7 +200,6 @@
             <option onclick="clearTiempoDesempleo();">No</option>
           </select>
         </div>
-
         <div class="form-group" id="divTiempoDesempleo" hidden>
           <label for="tiempo_desempleo">¿Desde hace cuanto tiempo no trabaja?</label>
           <select class="form-control" name="tiempo_desempleo" id="tiempoDesempleo">
@@ -234,7 +208,6 @@
             <option>Mas de 5 años</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="conoce_tic">¿Conoce qué son las TIC (tecnologías de la información y comunicaciones)?</label>
           <select class="form-control" name="conoce_tic" id="conoceTIC" required>
@@ -242,7 +215,6 @@
             <option onclick="showInteresTIC()">No</option>
           </select>
         </div>
-
         <div class="form-group" id="divUsaTIC" hidden>
           <label for="usa_tic">¿Hace uso de las TIC?</label>
           <select class="form-control" name="usa_tic" id="usaTIC">
@@ -250,7 +222,6 @@
             <option onclick="hiddenCualUso();">No</option>
           </select>
         </div>
-
         <fieldset id="divCualUso" hidden>
           <label for="entretenimiento_uso">¿Cual es su uso?</label>
           <div class="form-check">
@@ -320,12 +291,10 @@
             </label>
           </div>
         </fieldset>
-
         <div class="form-group" id="divOtroUso" hidden>
           <label for="otro_uso">¿Cual?</label>
           <input type="text" class="form-control" name="otro_uso" id="otroUso" placeholder="">
         </div>
-
         <div class="form-group" id="divInteresTIC" hidden>
           <label for="interes_tic">¿estaria intereseda en conocer y usar las TIC?</label>
           <select class="form-control" name="interes_tic" id="interesTIC">
@@ -333,7 +302,6 @@
             <option onclick="showDesinteresTIC();">No</option>
           </select>
         </div>
-
         <fileset id="divTipoInteres" hidden>
           <label for="tipoInteres">¿En cuales?</label>
           <div class="form-check">
@@ -397,7 +365,6 @@
               <input type="checkbox" class="form-check-input" name="tramites_interes" id="tramitesInteres">
               Servicios o trámites en línea (citas médicas, licencias, etc)
             </label>
-<<<<<<< HEAD
           </div>
           <div class="form-check">
             <label class="form-check-label">
@@ -406,19 +373,17 @@
             </label>
           </div>
         </fileset>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
-                Otro
-              </label>
-            </div>
+        <div class="form-check">
+          <label class="form-check-label">
+            <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
+            Otro
+          </label>
+        </div>
         </fieldset>
         <div class="form-group" id="divCualInteres" hidden>
           <label for="cual_interes">¿Cual?</label>
           <input type="text" class="form-control" name="cual_interes" id="cualInteres" placeholder="">
         </div>
-
         <div class="form-group" id="divDesinteresTIC" hidden>
           <label for="desinteres_tic">¿Cuál cree que sería el motivo??</label>
           <select class="form-control" name="desinteres_tic" id="desinteresTIC">
@@ -436,7 +401,7 @@
           <input type="text" class="form-control" name="cual_desinteres" id="cualDesinteres" placeholder="">
         </div>
         <div class="container my-auto text-center">
-            <input type="submit" value="Registrar" class="btn btn-primary">
+          <input type="submit" value="Registrar" class="btn btn-primary">
         </div>
       </form>
     </div>

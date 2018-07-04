@@ -55,8 +55,7 @@ class HomeController extends Controller
             $candidata->getEstadoCivil() == 'Unión libre' ||
             $candidata->getHijos() == 'Si'
         ) {
-            $tipoCandidataRepository->find(1);
-            $candidata->addCategoria($tipoCandidataRepository);
+            $candidata->addCategoria($tipoCandidataRepository->find(1));
         }
 
         //profesional
@@ -66,8 +65,7 @@ class HomeController extends Controller
             $candidata->getNivelEstudios() == 'Tecnóloga' ||
             $candidata->getNivelEstudios() == 'Técnica'
         ) {
-            $tipoCandidataRepository->find(2);
-            $candidata->addCategoria($tipoCandidataRepository);
+            $candidata->addCategoria($tipoCandidataRepository->find(2));
         }
 
         $candidata->setUltimoTitulo($request->request->get('ultimo_titulo'));
@@ -76,8 +74,7 @@ class HomeController extends Controller
         //estudiante
         $candidata->setActualmenteEstudia($request->request->get('actualmente_estudia'));
         if ($candidata->getActualmenteEstudia() == 'Si') {
-            $tipoCandidataRepository->find(3);
-            $candidata->addCategoria($tipoCandidataRepository);
+            $candidata->addCategoria($tipoCandidataRepository->find(3));
         }
 
 
@@ -87,8 +84,7 @@ class HomeController extends Controller
         //laboral
         $candidata->setActualmenteTrabaja($request->request->get('actualmente_trabaja'));
         if ($candidata->getActualmenteTrabaja() == 'Si') {
-            $tipoCandidataRepository->find(4);
-            $candidata->addCategoria($tipoCandidataRepository);
+            $candidata->addCategoria($tipoCandidataRepository->find(4));
         }
 
         $candidata->setSectorLaboral($request->request->get('sector_laboral'));
@@ -97,8 +93,7 @@ class HomeController extends Controller
         //empresarial
         $candidata->setNegocioPropio($request->request->get('negocio_propio'));
         if ($candidata->getNegocioPropio() == 'Si') {
-            $tipoCandidataRepository->find(5);
-            $candidata->addCategoria($tipoCandidataRepository);
+            $candidata->addCategoria($tipoCandidataRepository->find(5));
         }
 
         $candidata->setFormaTrabajo($request->request->get('forma_trabajo'));
@@ -133,8 +128,7 @@ class HomeController extends Controller
         $candidata->setDesinteresTIC($request->request->get('desinteres_tic'));
         $candidata->setCualDesinteres($request->request->get('cual_desinteres'));
 
-        dump($candidata);
-
+        $candidata->setFechaIngreso(new \DateTime());
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($candidata);

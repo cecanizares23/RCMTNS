@@ -1,13 +1,35 @@
-{% extends 'layout.html.twig' %}
+{% extends 'base2.html.twig' %}
 
-{% block title %}Edit TipoAporte{% endblock %}
+{% block title %}Editar Tipo de Aporte{% endblock %}
 
 {% block body %}
-    <h1>Edit TipoAporte</h1>
+  <div id="page-wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header">Editar tipo de Aporte</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"> Tipo de Aporte</div>
+          <div class="panel-body">
+            {{ form_start(form) }}
+            {{ include('tipo_aporte/_form.html.twig') }}
+            <br/>
+            <div class="row">
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-success">{{ ('Actualizar') }}</button>
+                {{ form_end(form) }}
+              </div>
+              {{ include('tipo_aporte/_delete_form.html.twig') }}
+            </div>
+            <hr/>
+            <a href="{{ path('tipo_aporte_index') }}">volver</a>
 
-    {{ include('tipo_aporte/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('tipo_aporte_index') }}">back to list</a>
-
-    {{ include('tipo_aporte/_delete_form.html.twig') }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}

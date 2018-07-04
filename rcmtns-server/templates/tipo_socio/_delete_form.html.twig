@@ -2,5 +2,5 @@
       onsubmit="return confirm('¿Esta seguro de eliminar este Tipo de socio?');">
   <input type="hidden" name="_method" value="DELETE">
   <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tipo_socio.id) }}">
-  <button class="btn btn-danger">Eliminar</button>
+  <button type="submit" class="btn btn-danger">Eliminar</button>
 </form>

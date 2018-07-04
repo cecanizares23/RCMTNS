@@ -1,7 +1,45 @@
-{{ form_start(form) }}
-    {{ form_widget(form) }}
-<button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
-
-{#{{ form_widget(form.nombre,{'attr': {'class': 'lincebb'}}) }}#}
-{#{{ form_widget(form.nombre) }}#}
+<div class="form-group">
+  {{ form_label(form.nombre) }}
+  {{ form_widget(form.nombre,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. new name</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.nit) }}
+  {{ form_widget(form.nit,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. E-1234</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.representante) }}
+  {{ form_widget(form.representante,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. Andres</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.cedulaRepresentante) }}
+  {{ form_widget(form.cedulaRepresentante,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. 10901234</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.correoRepresentante ) }}
+  {{ form_widget(form.correoRepresentante ,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. rep@gmail.com</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.telefonoRepresentante) }}
+  {{ form_widget(form.telefonoRepresentante ,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. 301123987</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.fechaIngreso) }}
+  {{ form_widget(form.fechaIngreso ,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. 2018 Jun 30</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.tipoSocio) }}
+  {{ form_widget(form.tipoSocio,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. selección unica</p>
+</div>
+<div class="form-group">
+  {{ form_label(form.tipoAporte) }}
+  {{ form_widget(form.tipoAporte,{'attr': {'class': 'form-control'}}) }}
+  <p class="help-block">Ej. selicción unica o multiple</p>
+</div>

@@ -45,8 +45,18 @@
                   <td>{{ socio.telefonoRepresentante }}</td>
                   <td>{{ socio.fechaIngreso ? socio.fechaIngreso|date('Y-m-d') : '' }}</td>
                   <td>
-                    <a href="{{ path('socio_edit', {'id': socio.id}) }}">edit</a>
-                    <a href="{{ path('socio_delete', {'id': socio.id}) }}">delete</a>
+                    <form method="post" action="{{ path('socio_delete', {'id': socio.id}) }}"
+                          onsubmit="return confirm('¿Esta seguro de eliminar este Socio?');">
+                      <input type="hidden" name="_method" value="DELETE">
+                      <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ socio.id) }}">
+                      <button type="submit" class="btn-link text-danger"><i class="fa fa-trash"
+                                                                            aria-hidden="true"></i> Eliminar
+                      </button>
+                      <a class="btn-link text-success"
+                         href="{{ path('socio_edit', {'id': socio.id}) }}"><i class="fa fa-pencil"
+                                                                              aria-hidden="true"></i>
+                        Editar</a>
+                    </form>
                   </td>
                 </tr>
               {% else %}

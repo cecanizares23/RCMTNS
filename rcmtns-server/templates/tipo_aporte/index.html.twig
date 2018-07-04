@@ -33,8 +33,19 @@
                   <td>{{ tipo_aporte.id }}</td>
                   <td>{{ tipo_aporte.nombre }}</td>
                   <td>
-                    <a href="{{ path('tipo_aporte_delete', {'id': tipo_aporte.id}) }}">delete</a>
-                    <a href="{{ path('tipo_aporte_edit', {'id': tipo_aporte.id}) }}">edit</a>
+                    <form method="post" action="{{ path('tipo_aporte_delete', {'id': tipo_aporte.id}) }}"
+                          onsubmit="return confirm('¿Esta seguro de eliminar este Tipo de aporte?');">
+                      <input type="hidden" name="_method" value="DELETE">
+                      <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tipo_aporte.id) }}">
+                      <button class="btn-link text-danger" type="submit"><i class="fa fa-trash"
+                                                                            aria-hidden="true"></i>
+                        Eliminar
+                      </button>
+                      <a class="btn-link text-success" href="{{ path('tipo_aporte_edit', {'id': tipo_aporte.id}) }}"><i
+                                class="fa fa-pencil"
+                                aria-hidden="true"></i>
+                        Editar</a>
+                    </form>
                   </td>
                 </tr>
               {% else %}

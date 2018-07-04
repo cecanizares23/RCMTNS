@@ -1,31 +1,3 @@
-$(document).ready(function () {
-    //enviarRegistro();
-});
-
-function enviarRegistro() {
-    $("#formRegistro").submit(function (e) {
-        e.preventDefault();
-        var datos = $(this).serializeArray();
-        var url = "";
-        realizarAjax(datos, url);
-    });
-    function realizarAjax(datos, url1) {
-
-        $.ajax({
-            data: datos,
-            url: url1,
-            type: 'POST',
-            success: function (response) {
-                if(response==="0"){
-
-                }else{
-
-                }
-            }
-        });
-
-    }
-}
 
 //funcion que muestra la parte del formulario de tipo de documento
 function showTipoDoc() {

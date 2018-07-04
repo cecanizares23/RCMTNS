@@ -11,7 +11,11 @@
         </h1>
       </div>
 
+<<<<<<< HEAD
       <form method="post" id="ginito">
+=======
+      <form method="POST"  name="formuRegistro" id="formuRegistro">
+>>>>>>> 31858cf3917f018292663d67d84792694aba3538
         <div class="form-group">
           <label for="tipo_doc">Tipo de documento</label>
           <select class="form-control" name="tipo_doc" id="tioDoc" required>
@@ -23,7 +27,7 @@
 
         <div class="form-group" id="divCualTipoDoc" hidden>
           <label for="cual_tipo_doc">¿Cual?</label>
-          <input type="text" class="form-control" name="cual_tipo_doc" id="cualTipoDoc" placeholder="" required>
+          <input type="text" class="form-control" name="cual_tipo_doc" id="cualTipoDoc" placeholder="" >
         </div>
 
 
@@ -330,7 +334,7 @@
           </select>
         </div>
 
-        <div id="divTipoInteres" hidden>
+        <fileset id="divTipoInteres" hidden>
           <label for="tipoInteres">¿En cuales?</label>
           <div class="form-check">
             <label class="form-check-label">
@@ -393,6 +397,7 @@
               <input type="checkbox" class="form-check-input" name="tramites_interes" id="tramitesInteres">
               Servicios o trámites en línea (citas médicas, licencias, etc)
             </label>
+<<<<<<< HEAD
           </div>
           <div class="form-check">
             <label class="form-check-label">
@@ -400,7 +405,15 @@
               Otro
             </label>
           </div>
-        </div>
+        </fileset>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
+                Otro
+              </label>
+            </div>
+        </fieldset>
         <div class="form-group" id="divCualInteres" hidden>
           <label for="cual_interes">¿Cual?</label>
           <input type="text" class="form-control" name="cual_interes" id="cualInteres" placeholder="">
@@ -423,7 +436,7 @@
           <input type="text" class="form-control" name="cual_desinteres" id="cualDesinteres" placeholder="">
         </div>
         <div class="container my-auto text-center">
-          <input type="submit" class="btn btn-primary">
+            <input type="submit" value="Registrar" class="btn btn-primary">
         </div>
       </form>
     </div>

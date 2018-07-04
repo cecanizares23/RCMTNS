@@ -11,7 +11,7 @@
         </h1>
       </div>
 
-      <form method="post">
+      <form method="post" id="ginito">
         <div class="form-group">
           <label for="tipo_doc">Tipo de documento</label>
           <select class="form-control" name="tipo_doc" id="tioDoc" required>
@@ -330,7 +330,7 @@
           </select>
         </div>
 
-        <fieldset id="divTipoInteres" hidden>
+        <div id="divTipoInteres" hidden>
           <label for="tipoInteres">¿En cuales?</label>
           <div class="form-check">
             <label class="form-check-label">
@@ -393,14 +393,14 @@
               <input type="checkbox" class="form-check-input" name="tramites_interes" id="tramitesInteres">
               Servicios o trámites en línea (citas médicas, licencias, etc)
             </label>
-            </di    v>
-            <div class="form-check">
-              <label class="form-check-label">
-                <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
-                Otro
-              </label>
-            </div>
-        </fieldset>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input onclick="showCualInteres();" type="checkbox" class="form-check-input">
+              Otro
+            </label>
+          </div>
+        </div>
         <div class="form-group" id="divCualInteres" hidden>
           <label for="cual_interes">¿Cual?</label>
           <input type="text" class="form-control" name="cual_interes" id="cualInteres" placeholder="">

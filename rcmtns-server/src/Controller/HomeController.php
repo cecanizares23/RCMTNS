@@ -22,10 +22,7 @@ class HomeController extends Controller
      */
     public function new(Request $request): Response
     {
-        return $this->render('candidata/new.html.twig', [
-//            'candidatum' => $candidatum,
-//            'form' => $form->createView(),
-        ]);
+        return $this->render('candidata/new.html.twig');
     }
 
 

@@ -2,144 +2,65 @@
 
 {% block title %}Candidata index{% endblock %}
 
+{% block stylesheets %}
+  <link href="/Util/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+  <link href="/Util/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
   <div id="page-wrapper">
     <div class="row">
       <div class="col-lg-12">
         <h1 class="page-header">Lista de Candidatas</h1>
       </div>
-      <!-- /.col-lg-12 -->
     </div>
     <div class="row">
       <div class="col-lg-12">
         <div class="panel panel-default">
           <div class="panel-heading"> Candidatas</div>
           <div class="panel-body">
-            <table class="table table-responsive">
+            <table class="table table-striped table-bordered table-hover table-responsive" width="100%"
+                   id="dataTables-example">
               <thead>
               <tr>
-                <th>Id</th>
-                <th>TipoDoc</th>
-                <th>CualTipoDoc</th>
-                <th>NumeroID</th>
                 <th>Nombres</th>
                 <th>Apellidos</th>
-                <th>FechaNacimiento</th>
+                <th>Tipo Documento</th>
+                <th>Numero Documento</th>
+                <th>Fecha de Nacimiento</th>
                 <th>Email</th>
                 <th>Telefono</th>
                 <th>Direccion</th>
-                <th>EstadoCivil</th>
-                <th>Hijos</th>
-                <th>NivelEstudios</th>
-                <th>UltimoTitulo</th>
-                <th>NombreTitulo</th>
-                <th>ActualmenteEstudia</th>
-                <th>QueEstudia</th>
-                <th>NombreTituloObtener</th>
-                <th>ActualmenteTrabaja</th>
-                <th>SectorLaboral</th>
-                <th>CualSector</th>
-                <th>NegocioPropio</th>
-                <th>FormaTrabajo</th>
-                <th>TipoEmpresa</th>
-                <th>HaTrabajado</th>
-                <th>TiempoDesempleo</th>
-                <th>ConoceTIC</th>
-                <th>UsaTIC</th>
-                <th>EntretenimientoUso</th>
-                <th>RedesUso</th>
-                <th>CorreoUso</th>
-                <th>ComprasUso</th>
-                <th>VentasUso</th>
-                <th>ComunicaionUso</th>
-                <th>EducacionUso</th>
-                <th>BancoUso</th>
-                <th>ServiciosPublicosUso</th>
-                <th>TramitesUso</th>
-                <th>OtroUso</th>
-                <th>InteresTIC</th>
-                <th>EntretenimientoInteres</th>
-                <th>RedesInteres</th>
-                <th>CorreoInteres</th>
-                <th>ComprasInteres</th>
-                <th>VentasInteres</th>
-                <th>ComunicacionInteres</th>
-                <th>EducacionInteres</th>
-                <th>BancoInteres</th>
-                <th>ServiciosPublicosInteres</th>
-                <th>TramitesInteres</th>
-                <th>DesinteresTIC</th>
-                <th>CualDesinteres</th>
-                <th>CualInteres</th>
-                <th>FechaIngreso</th>
+                <th>Categoria</th>
+                <th>Fecha de ingreso</th>
                 <th>actions</th>
               </tr>
               </thead>
               <tbody>
               {% for candidatum in candidatas %}
                 <tr>
-                  <td>{{ candidatum.id }}</td>
-                  <td>{{ candidatum.tipoDoc }}</td>
-                  <td>{{ candidatum.cualTipoDoc }}</td>
-                  <td>{{ candidatum.numeroID }}</td>
                   <td>{{ candidatum.nombres }}</td>
                   <td>{{ candidatum.apellidos }}</td>
+                  <td>{{ candidatum.tipoDoc }}</td>
+                  <td>{{ candidatum.numeroID }}</td>
                   <td>{{ candidatum.fechaNacimiento }}</td>
                   <td>{{ candidatum.email }}</td>
                   <td>{{ candidatum.telefono }}</td>
                   <td>{{ candidatum.direccion }}</td>
-                  <td>{{ candidatum.estadoCivil }}</td>
-                  <td>{{ candidatum.hijos }}</td>
-                  <td>{{ candidatum.nivelEstudios }}</td>
-                  <td>{{ candidatum.ultimoTitulo }}</td>
-                  <td>{{ candidatum.nombreTitulo }}</td>
-                  <td>{{ candidatum.actualmenteEstudia }}</td>
-                  <td>{{ candidatum.queEstudia }}</td>
-                  <td>{{ candidatum.nombreTituloObtener }}</td>
-                  <td>{{ candidatum.actualmenteTrabaja }}</td>
-                  <td>{{ candidatum.sectorLaboral }}</td>
-                  <td>{{ candidatum.cualSector }}</td>
-                  <td>{{ candidatum.negocioPropio }}</td>
-                  <td>{{ candidatum.formaTrabajo }}</td>
-                  <td>{{ candidatum.tipoEmpresa }}</td>
-                  <td>{{ candidatum.haTrabajado }}</td>
-                  <td>{{ candidatum.tiempoDesempleo }}</td>
-                  <td>{{ candidatum.conoceTIC }}</td>
-                  <td>{{ candidatum.usaTIC }}</td>
-                  <td>{{ candidatum.entretenimientoUso }}</td>
-                  <td>{{ candidatum.redesUso }}</td>
-                  <td>{{ candidatum.correoUso }}</td>
-                  <td>{{ candidatum.comprasUso }}</td>
-                  <td>{{ candidatum.ventasUso }}</td>
-                  <td>{{ candidatum.comunicaionUso }}</td>
-                  <td>{{ candidatum.educacionUso }}</td>
-                  <td>{{ candidatum.bancoUso }}</td>
-                  <td>{{ candidatum.serviciosPublicosUso }}</td>
-                  <td>{{ candidatum.tramitesUso }}</td>
-                  <td>{{ candidatum.otroUso }}</td>
-                  <td>{{ candidatum.interesTIC }}</td>
-                  <td>{{ candidatum.entretenimientoInteres }}</td>
-                  <td>{{ candidatum.redesInteres }}</td>
-                  <td>{{ candidatum.correoInteres }}</td>
-                  <td>{{ candidatum.comprasInteres }}</td>
-                  <td>{{ candidatum.ventasInteres }}</td>
-                  <td>{{ candidatum.comunicacionInteres }}</td>
-                  <td>{{ candidatum.educacionInteres }}</td>
-                  <td>{{ candidatum.bancoInteres }}</td>
-                  <td>{{ candidatum.serviciosPublicosInteres }}</td>
-                  <td>{{ candidatum.tramitesInteres }}</td>
-                  <td>{{ candidatum.desinteresTIC }}</td>
-                  <td>{{ candidatum.cualDesinteres }}</td>
-                  <td>{{ candidatum.cualInteres }}</td>
+                  <td>
+                    {% for categoria in candidatum.categorias %}
+                      {{ categoria }}
+                    {% endfor %}
+                  </td>
                   <td>{{ candidatum.fechaIngreso ? candidatum.fechaIngreso|date('Y-m-d') : '' }}</td>
                   <td>
                     <a href="{{ path('candidata_show', {'id': candidatum.id}) }}">show</a>
                     <a href="{{ path('candidata_edit', {'id': candidatum.id}) }}">edit</a>
                   </td>
-                </tr>
-              {% else %}
-                <tr>
-                  <td colspan="55">no records found</td>
+                  {#</tr>#}
+                  {#{% else %}#}
+                  {#<tr>#}
+                  {#<td colspan="55">no records found</td>#}
                 </tr>
               {% endfor %}
               </tbody>
@@ -149,4 +70,17 @@
       </div>
     </div>
   </div>
+{% endblock %}
+
+{% block javascripts %}
+  <script src="/Util/datatables/js/jquery.dataTables.js"></script>
+  <script src="/Util/datatables-plugins/dataTables.bootstrap.js"></script>
+  <script src="/Util/datatables-responsive/dataTables.responsive.js"></script>
+  <script>
+      $(document).ready(function () {
+          $('#dataTables-example').DataTable({
+              responsive: true
+          });
+      });
+  </script>
 {% endblock %}

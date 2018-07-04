@@ -17,7 +17,7 @@ class CandidataController extends Controller
 {
 
     /**
-        * @Route("/", name="candidata_index", methods="GET|POST")
+     * @Route("/", name="candidata_index", methods="GET|POST")
      */
     public function index(CandidataRepository $candidataRepository): Response
     {

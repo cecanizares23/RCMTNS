@@ -4462,6 +4462,8 @@ tbody.collapse.show {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+  background-color: #f8a5c2;
+  color: #574b90;
 }
 
 .card-title {

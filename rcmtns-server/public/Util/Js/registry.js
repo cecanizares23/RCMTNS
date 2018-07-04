@@ -138,10 +138,12 @@ function hideOtroDesinteres() {
 }
 
 function showFormRegistro() {
+    window.location.hash = "registro";
     document.getElementById("registro").hidden=false;
 }
 
 function showQuieneSomos() {
+    window.location.hash = "quieneSomos";
     document.getElementById("quieneSomos").hidden=false;
 }
 

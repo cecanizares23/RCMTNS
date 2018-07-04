@@ -24,7 +24,7 @@ class TipoAporteController extends Controller
     }
 
     /**
-     * @Route("/new", name="tipo_aporte_new", methods="GET|POST")
+     * @Route("/new", name="tipo_aporte_new", methods="GET")
      */
     public function new(Request $request): Response
     {
@@ -32,18 +32,23 @@ class TipoAporteController extends Controller
         $form = $this->createForm(TipoAporteType::class, $tipoAporte);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($tipoAporte);
-            $em->flush();
-
-            return $this->redirectToRoute('tipo_aporte_index');
-        }
-
         return $this->render('tipo_aporte/new.html.twig', [
             'tipo_aporte' => $tipoAporte,
             'form' => $form->createView(),
         ]);
+    }
+
+     /**
+     * @Route("/new", methods="POST")
+     */
+    public function new2(Request $request): Response
+    {
+        $tipoAporte = new TipoAporte();
+        $tipoAporte->setNombre($request->request->get('nombre'));
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($tipoAporte);
+        $em->flush();
+        return $this->redirectToRoute('tipo_aporte_index');
     }
 
     /**
@@ -65,7 +70,7 @@ class TipoAporteController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('tipo_aporte_edit', ['id' => $tipoAporte->getId()]);
+            return $this->redirectToRoute('tipo_aporte_index', ['id' => $tipoAporte->getId()]);
         }
 
         return $this->render('tipo_aporte/edit.html.twig', [

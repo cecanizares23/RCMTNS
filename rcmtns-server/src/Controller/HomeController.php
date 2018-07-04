@@ -15,8 +15,9 @@ use App\Form\Candidata1Type;
 
 class HomeController extends Controller
 {
+
     /**
-     * @Route("/", name="candidata_new", methods="GET|POST")
+     * @Route("/", methods="GET|POST")
      */
     public function new(Request $request): Response
     {

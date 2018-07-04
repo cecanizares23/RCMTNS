@@ -17,6 +17,14 @@ class CandidataController extends Controller
 {
 
     /**
+        * @Route("/", name="candidata_index", methods="GET|POST")
+     */
+    public function index(CandidataRepository $candidataRepository): Response
+    {
+        return $this->render('candidata/index.html.twig', ['candidatas' => $candidataRepository->findAll()]);
+    }
+
+    /**
      * @Route("/new", name="candidata_new", methods="GET|POST")
      */
     public function new(Request $request): Response

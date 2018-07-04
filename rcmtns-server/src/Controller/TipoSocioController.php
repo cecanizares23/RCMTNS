@@ -32,14 +32,6 @@ class TipoSocioController extends Controller
         $form = $this->createForm(TipoSocioType::class, $tipoSocio);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($tipoSocio);
-            $em->flush();
-
-            return $this->redirectToRoute('tipo_socio_index');
-        }
-
         return $this->render('tipo_socio/new.html.twig', [
             'tipo_socio' => $tipoSocio,
             'form' => $form->createView(),
@@ -91,12 +83,14 @@ class TipoSocioController extends Controller
      */
     public function delete(Request $request, TipoSocio $tipoSocio): Response
     {
+        dump($this->isCsrfTokenValid('delete'.$tipoSocio->getId(), $request->request->get('_token')));
+        dump($tipoSocio);
         if ($this->isCsrfTokenValid('delete'.$tipoSocio->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($tipoSocio);
             $em->flush();
         }
-
+        dump('hola');
         return $this->redirectToRoute('tipo_socio_index');
     }
 }

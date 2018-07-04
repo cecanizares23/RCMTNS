@@ -1408,8 +1408,10 @@ a.bg-danger:focus {
   background-color: #e4b9b9;
 }
 .page-header {
+  text-align: center;
   padding-bottom: 9px;
   margin: 40px 0 20px;
+  color: #574b90;
   border-bottom: 1px solid #eee;
 }
 ul,
@@ -5686,8 +5688,8 @@ button.list-group-item-danger.active:focus {
   border-color: #ddd;
 }
 .panel-default > .panel-heading {
-  color: #333;
-  background-color: #f5f5f5;
+  color: #FFFFFF;
+  background-color: #786fa6;
   border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {

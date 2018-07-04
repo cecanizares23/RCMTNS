@@ -1,5 +1,6 @@
-<form method="post" action="{{ path('tipo_socio_delete', {'id': tipo_socio.id}) }}" onsubmit="return confirm('Are you sure you want to delete this item?');">
-    <input type="hidden" name="_method" value="DELETE">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tipo_socio.id) }}">
-    <button class="btn">Delete</button>
+<form method="post" action="{{ path('tipo_socio_delete', {'id': tipo_socio.id}) }}"
+      onsubmit="return confirm('¿Esta seguro de eliminar este Tipo de socio?');">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ tipo_socio.id) }}">
+  <button class="btn btn-danger">Eliminar</button>
 </form>

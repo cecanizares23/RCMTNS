@@ -52,7 +52,6 @@ class TipoSocioController extends Controller
     }
 
 
-
     /**
      * @Route("/{id}", name="tipo_socio_show", methods="GET")
      */
@@ -83,14 +82,11 @@ class TipoSocioController extends Controller
      */
     public function delete(Request $request, TipoSocio $tipoSocio): Response
     {
-        dump($this->isCsrfTokenValid('delete'.$tipoSocio->getId(), $request->request->get('_token')));
-        dump($tipoSocio);
-        if ($this->isCsrfTokenValid('delete'.$tipoSocio->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $tipoSocio->getId(), $request->request->get('_token'))) {
             $em = $this->getDoctrine()->getManager();
             $em->remove($tipoSocio);
             $em->flush();
         }
-        dump('hola');
         return $this->redirectToRoute('tipo_socio_index');
     }
 }

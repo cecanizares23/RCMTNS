@@ -48,7 +48,7 @@ class HomeController extends Controller
         $candidata->setEstadoCivil($request->request->get('estado_civil'));
         $candidata->setHijos($request->request->get('hijos'));
         if (
-            $candidata->getEstadoCivil() == 'Soltera' ||
+            $candidata->getEstadoCivil() == 'Casada' ||
             $candidata->getEstadoCivil() == 'Unión libre' ||
             $candidata->getHijos() == 'Si'
         ) {
@@ -130,7 +130,7 @@ class HomeController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->persist($candidata);
         $em->flush();
-
+        dump($candidata);
         return $this->redirectToRoute('index');
 
     }

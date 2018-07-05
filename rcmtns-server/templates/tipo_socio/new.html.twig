@@ -1,42 +1,34 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base3.html.twig' %}
 
 {% block title %}Registrar Tipo de Socio{% endblock %}
 
 {% block body %}
-    <div id="page-wrapper">
-    <div class="row">
-        <div class="col-lg-8">
-            <h1 class="page-header">Registrar Tipo de Socio</h1>
+    <div class="row page-titles">
+        <div class="col-md-5 col-8 align-self-center">
+            <h3 class="text-themecolor">Registrar Tipo Socio</h3>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Admin</a></li>
+                <li class="breadcrumb-item active">Registrar Tipo Socio</li>
+            </ol>
         </div>
-        <!-- /.col-lg-12 -->
     </div>
     <div class="row">
-        <div class="col-lg-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Registro
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <form role="form" name="tipo_socio" method="post">
-                                <div class="form-group">
-                                    <label for="nombre">Nombre Tipo de Socio</label>
-                                    <input class="form-control"type="text" name="nombre" id="nombre" required>
-                                    <p class="help-block">Ej. Universidad</p>
-                                </div>
-                                <button type="submit" class="btn btn-default">Registrar</button>
-                            </form>
-                        </div>
-                        <!-- /.col-lg-6 (nested) -->
+        <!-- column -->
+        <div class="col-lg-7">
+            <div class="card">
+                <div class="card-block">
+                    <div class="">
+                        <form role="form" name="tipo_socio" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Tipo de Socio</label>
+                                <input class="form-control"type="text" name="nombre" id="nombre" required>
+                                <p class="help-block">Ej. Universidad</p>
+                            </div>
+                            <button type="submit" class="btn waves-effect waves-light btn-warning hidden-md-down">Registrar</button>
+                        </form>
                     </div>
-                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.panel-body -->
             </div>
-            <!-- /.panel -->
         </div>
-        <!-- /.col-lg-12 -->
-    </div>
     </div>
 {% endblock %}

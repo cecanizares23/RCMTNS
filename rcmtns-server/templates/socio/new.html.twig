@@ -1,94 +1,88 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base3.html.twig' %}
 
 {% block title %}Registrar Socio{% endblock %}
 
 {% block body %}
-  <div id="page-wrapper">
-    <div class="row">
-      <div class="col-lg-8">
-        <h1 class="page-header">Registrar Socio</h1>
-      </div>
-      <!-- /.col-lg-12 -->
+  <div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+      <h3 class="text-themecolor">Registrar Socio</h3>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Admin</a></li>
+        <li class="breadcrumb-item active">Registrar Socio</li>
+      </ol>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            Registro
-          </div>
-          <div class="panel-body">
-            <div class="row">
-              <form role="form" name="tipo_aporte" method="post">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input class="form-control" type="text" name="nombre" id="nombre" required>
-                    <p class="help-block">Ej. Economico</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="representante">Representante</label>
-                    <input class="form-control" type="text" name="representante" id="representante" required>
-                    <p class="help-block">Ej. Juan Rodriguez</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="correo_representante">Correo Representante</label>
-                    <input class="form-control" type="email" name="correo_representante" id="correo_representante"
-                           required>
-                    <p class="help-block">Ej. Juan@mail.com</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="fecha_ingreso">Fecha de ingreso</label>
-                    <input class="form-control" type="date" name="fecha_ingreso" id="fecha_ingreso" required>
-                    <p class="help-block">Ej. 2018/05/30</p>
-                  </div>
+  </div>
+  <div class="row">
+    <!-- column -->
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-block">
+            <form role="form" name="tipo_aporte" method="post">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="nombre">Nombre</label>
+                  <input class="form-control" type="text" name="nombre" id="nombre" required>
+                  <p class="help-block">Ej. Economico</p>
+                </div>
+                <div class="form-group">
+                  <label for="representante">Representante</label>
+                  <input class="form-control" type="text" name="representante" id="representante" required>
+                  <p class="help-block">Ej. Juan Rodriguez</p>
+                </div>
+                <div class="form-group">
+                  <label for="correo_representante">Correo Representante</label>
+                  <input class="form-control" type="email" name="correo_representante" id="correo_representante"
+                         required>
+                  <p class="help-block">Ej. Juan@mail.com</p>
+                </div>
+                <div class="form-group">
+                  <label for="fecha_ingreso">Fecha de ingreso</label>
+                  <input class="form-control" type="date" name="fecha_ingreso" id="fecha_ingreso" required>
+                  <p class="help-block">Ej. 2018/05/30</p>
+                </div>
 
+              </div>
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="nit">NIT</label>
+                  <input class="form-control" type="text" name="nit" id="nit" required>
+                  <p class="help-block">Ej. 444444001</p>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <label for="nit">NIT</label>
-                    <input class="form-control" type="text" name="nit" id="nit" required>
-                    <p class="help-block">Ej. 444444001</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="cedula_representante">Cedula Representante</label>
-                    <input class="form-control" type="number" name="cedula_representante" id="cedula_representante"
-                           required>
-                    <p class="help-block">Ej. 109558444</p>
-                  </div>
-                  <div class="form-group">
-                    <label for="telefono_representante">Telefono Representante</label>
-                    <input class="form-control" type="tel" name="telefono_representante" id="telefono_representante"
-                           required>
-                    <p class="help-block">Ej. 3153555555</p>
-                  </div>
-                  <div class="form-group">
-                    <label>Tipo Socio</label>
-                    <select class="form-control" name="tipo_socio_id" id="tipo_socio_id" required>
+                <div class="form-group">
+                  <label for="cedula_representante">Cedula Representante</label>
+                  <input class="form-control" type="number" name="cedula_representante" id="cedula_representante"
+                         required>
+                  <p class="help-block">Ej. 109558444</p>
+                </div>
+                <div class="form-group">
+                  <label for="telefono_representante">Telefono Representante</label>
+                  <input class="form-control" type="tel" name="telefono_representante" id="telefono_representante"
+                         required>
+                  <p class="help-block">Ej. 3153555555</p>
+                </div>
+                <div class="form-group">
+                  <label>Tipo Socio</label>
+                  <select class="form-control" name="tipo_socio_id" id="tipo_socio_id" required>
                       {% for socio in socios %}
-                      <option value="{{ socio.id }}">{{ socio.nombre }}</option>
+                    <option value="{{ socio.id }}">{{ socio.nombre }}</option>
                       {% endfor %}#}
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label>Tipo aporte</label>
-                    <select multiple class="form-control" name="tipo_aporte_id[]" id="tipo_aporte_id" required>
-                      {% for aporte in aportes %}
-                      <option value="{{ aporte.id }}">{{ aporte.nombre }}</option>
-                      {% endfor %}#}
-                    </select>
-                  </div>
+                  </select>
                 </div>
-                <button type="submit" class="btn btn-default">Registrar</button>
-              </form>
-              <!-- /.col-lg-6 (nested) -->
-            </div>
-            <!-- /.row (nested) -->
-          </div>
-          <!-- /.panel-body -->
+                <div class="form-group">
+                  <label>Tipo aporte</label>
+                  <select multiple class="form-control" name="tipo_aporte_id[]" id="tipo_aporte_id" required>
+                      {% for aporte in aportes %}
+                    <option value="{{ aporte.id }}">{{ aporte.nombre }}</option>
+                      {% endfor %}#}
+                  </select>
+                </div>
+                <button type="submit" class="btn waves-effect waves-light btn-warning hidden-md-down">Registrar</button>
+              </div>
+
+            </form>
         </div>
-        <!-- /.panel -->
+
       </div>
-      <!-- /.col-lg-12 -->
     </div>
   </div>
 {% endblock %}

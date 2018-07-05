@@ -1,28 +1,32 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base3.html.twig' %}
 
 {% block title %}Editar Tipo de Socio{% endblock %}
 
 {% block body %}
-  <div id="page-wrapper">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1 class="page-header">Editar tipo de Socio</h1>
-      </div>
+  <div class="row page-titles">
+    <div class="col-md-5 col-8 align-self-center">
+      <h3 class="text-themecolor">Editar Tipo Socio</h3>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0)">Admin</a></li>
+        <li class="breadcrumb-item active">Editar Tipo Socio</li>
+      </ol>
     </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="panel panel-default">
-          <div class="panel-heading"> Tipo de Socio</div>
-          <div class="panel-body">
-            {{ form_start(form) }}
-            {{ include('tipo_socio/_form.html.twig') }}
+  </div>
+  <div class="row">
+    <!-- column -->
+    <div class="col-lg-12">
+      <div class="card">
+        <div class="card-block">
+          <div class="">
+              {{ form_start(form) }}
+              {{ include('tipo_socio/_form.html.twig') }}
             <br/>
             <div class="row">
               <div class="col-md-2">
                 <button type="submit" class="btn btn-success">{{ ('Actualizar') }}</button>
-                {{ form_end(form) }}
+                  {{ form_end(form) }}
               </div>
-              {{ include('tipo_socio/_delete_form.html.twig',{'button_label': 'Eliminar'}) }}
+                {{ include('tipo_socio/_delete_form.html.twig',{'button_label': 'Eliminar'}) }}
             </div>
             <hr/>
             <a href="{{ path('tipo_socio_index') }}">volver</a>
@@ -31,4 +35,5 @@
       </div>
     </div>
   </div>
+
 {% endblock %}
